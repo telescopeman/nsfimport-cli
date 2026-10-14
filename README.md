@@ -4,7 +4,7 @@ A command-line version of Brad Smith's **NSF Importer v0.5**, which turns NSF/NS
 
 The original importer was a modified copy of FamiTracker 0.3.7 for Windows only. You had to open the program, pick "Import NSF..." from a menu, fill in a dialog, and then save. This version keeps the conversion code and drops the rest of FamiTracker. You give it a file and it writes an `.ftm`. It builds on macOS, Linux and Windows.
 
-Disclaimer: This was basically vibecoded. As with all vibecoded apps, use with caution.
+Disclaimer: This was basically vibecoded for my own personal use. As with all vibecoded apps, use with caution, and don't be surprised if it has weird errors or limitations.
 
 ## Building
 
