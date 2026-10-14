@@ -1,0 +1,5 @@
+nsfimport
+nsfimport.exe
+*.o
+build/
+.DS_Store
