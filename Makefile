@@ -34,7 +34,19 @@ $(TARGET): $(OBJS)
 %.o: %.c src/notsofatso/fmopl.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# macOS only: a drag-and-drop app ("droplet") that wraps the command-line tool.
+# Drop .nsf files on it, or double-click it to choose some.
+APP = NSF Import.app
+
+app: $(TARGET)
+	rm -rf "$(APP)"
+	osacompile -o "$(APP)" "macos/NSF Import.applescript"
+	cp $(TARGET) "$(APP)/Contents/Resources/nsfimport"
+	codesign --force --deep --sign - "$(APP)"
+	@echo "Built $(APP) - drag it to your Applications folder or Dock if you like."
+
 clean:
 	rm -f $(OBJS) $(TARGET) $(TARGET).exe
+	rm -rf "$(APP)"
 
-.PHONY: all clean
+.PHONY: all app clean

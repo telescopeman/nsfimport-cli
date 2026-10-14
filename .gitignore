@@ -2,4 +2,5 @@ nsfimport
 nsfimport.exe
 *.o
 build/
+NSF Import.app/
 .DS_Store

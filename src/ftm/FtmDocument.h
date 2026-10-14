@@ -46,8 +46,8 @@ const int MAX_VOLUME         = 0x10; // "no volume" marker in a pattern cell
 enum note_t {
     NONE = 0,
     C, Cs, D, Ds, E, F, Fs, G, Gs, A, As, B,
-    HALT,     // "---" note cut
-    RELEASE   // "===" note release
+    RELEASE,  // 13: "===" note release (as numbered in FamiTracker 0.3.7)
+    HALT      // 14: "---" note cut (shown as OFF in Furnace)
 };
 
 // Effect numbers as stored in .ftm files (stable since FamiTracker 0.3.x).

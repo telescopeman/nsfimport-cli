@@ -20,6 +20,21 @@ This produces `./nsfimport`. You can also build with CMake:
 cmake -S . -B build && cmake --build build
 ```
 
+## Drag-and-drop app (macOS)
+
+To skip the Terminal, build the droplet app once:
+
+```sh
+make app
+```
+
+This creates **NSF Import.app** in this folder. You can move it to Applications or keep it in the Dock.
+
+* **Drag** one or more `.nsf`/`.nsfe` files onto its icon.
+* **Or double-click it** and choose files.
+
+Each NSF becomes a `.ftm` next to it, using the default settings (including any `.m3u` names). A window then lists what was made, with a "Show in Finder" button. The app carries its own copy of the tool, so run `make app` again after updating the source.
+
 ## Usage
 
 ```

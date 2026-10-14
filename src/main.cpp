@@ -25,7 +25,7 @@
 #include <string>
 #include <vector>
 
-#define NSFIMPORT_VERSION "1.3 (based on NSF Importer v0.5)"
+#define NSFIMPORT_VERSION "1.4 (based on NSF Importer v0.5)"
 
 static void Usage(FILE* out)
 {
